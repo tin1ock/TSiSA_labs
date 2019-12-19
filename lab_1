@@ -35,7 +35,7 @@ void Min(const double& sigma, const int& k, double& a, double& b)
 	x2 = ((a + b) / 2) - sigma;
 	if (function(x2) < function(x1)) { b = a + (b - a) / 2; }
 	else { a += (b - a) / 2; };
-	cout << fixed << setprecision(5) << left << setw(10) << k << setw(10) << a << setw(10) << b << setw(10) << function(x1) << setw(10) << function(x2) << setw(10) << (b-a) << '\n';
+	cout << fixed << setprecision(5) << left << setw(10) << k << setw(10) << a << setw(10) << b << setw(10) << x1 << setw(10) << x2 << setw(10) << function(x1) << setw(10) << function(x2) << setw(10) << (b-a) << '\n';
 }
 
 void main()
@@ -56,7 +56,7 @@ cin >> sigma;
 cout << '\n';
 N = 1;
 int k = 1;
-cout << left << setw(10) << "N" << setw(10) << "a" << setw(10) << "b" << setw(10) << "f(x1)" << setw(10) << "f(x2)" << setw(10) << "l" << '\n';
+cout << left << setw(10) << "N" << setw(10) << "a" << setw(10) << "b" << setw(10) << "x1" << setw(10) << "x2" << setw(10) << "f(x1)" << setw(10) << "f(x2)" << setw(10) << "l" << '\n';
 do {
 	Min(sigma, k, a, b);
 	k++;
