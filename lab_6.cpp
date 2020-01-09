@@ -44,7 +44,7 @@ vector <double> function_noise(const vector<double>& x, const double& a1, const 
 	vector <double> func(101);
 	for (auto i = 0; i <= 100; i++)
 	{
-		func[i] = noise(function(x[i]), a1, a2);
+		func[i] = noise(x[i], a1, a2);
 	}
 	return func;
 }
@@ -196,12 +196,14 @@ int main()
 				Dmin = D;
 				alphamin = alpha;
 			}
+			
 		}
 		h = (double)l / L;
 		data.push_back({ h, Distmin, alphamin, Wmin, Dmin });
 		cout << fixed << setprecision(1) << h << "  " << setprecision(4) << Distmin << "   [ ";
 		for (auto i : alphamin) cout << i << " ";
 		cout << "]  " << Wmin << "   " << Dmin << endl;
+		Distmin = 9000000;
 	}
 
 	//вывод для первого отфильтрованного графика(потом удалить 4 строчки)
@@ -248,6 +250,7 @@ int main()
 		cout << fixed << setprecision(1) << h << "  " << setprecision(4) << Distmin << "   [ ";
 		for (auto i : alphamin) cout << i << " ";
 		cout << "]  " << Wmin << "   " << Dmin << endl;
+		Distmin = 9000000;
 	}
 
 	//вывод для второго отфильтрованного графика
