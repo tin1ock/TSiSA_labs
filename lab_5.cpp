@@ -127,7 +127,7 @@ vector <vector<double>> set_matrix_criterion(const vector<vector<double>>& matri
 			{
 				if (matrix[i2][criterion] - matrix[i1][criterion] == 1) matrixret[i1][i2] = 1. / 3;
 				if (matrix[i2][criterion] - matrix[i1][criterion] == 2) matrixret[i1][i2] = 1. / 5;
-				if (matrix[i2][criterion] - matrix[i1][criterion] == 3) matrixret[i1][i2] = 1./ 7;
+				if (matrix[i2][criterion] - matrix[i1][criterion] == 3) matrixret[i1][i2] = 1. / 7;
 				if (matrix[i2][criterion] - matrix[i1][criterion] == 4) matrixret[i1][i2] = 1. / 9;
 			}
 		}
@@ -265,7 +265,7 @@ int main()
 	cout << "Метод замены критериев" << endl << endl;
 	vector <vector<double>> matrix4x4 = norm_matix_criterion(matrix, 2);
 
-	cout << "Нормированная матрица (кроме главного критерия: качество пляжа)" << endl;
+	cout << "Нормированная матрица (кроме главного критерия)" << endl;
 	print_abcd(matrix4x4);
 	cout << endl << endl;
 
